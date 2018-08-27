@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/textLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@android:string/unknownName"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@android:string/unknownName"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/sProject"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/btnDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="btnDateOnClick"
+                app:srcCompat="@android:drawable/ic_menu_today" />
+        </LinearLayout>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            style="@android:style/Widget.Holo.Light.CalendarView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:firstDayOfWeek="2"
+            android:showWeekNumber="false" />
+
+        <ListView
+            android:id="@+id/lvMember"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+        </ListView>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnSubmitOnClick"
+            android:text="@string/submit" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
