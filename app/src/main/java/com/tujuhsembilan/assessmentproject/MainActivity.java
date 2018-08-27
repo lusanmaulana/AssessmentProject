@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity {
 
