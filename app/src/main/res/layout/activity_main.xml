@@ -54,6 +54,7 @@
                 android:id="@+id/btnDate"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:contentDescription="@android:string/unknownName"
                 android:onClick="btnDateOnClick"
                 app:srcCompat="@android:drawable/ic_menu_today" />
         </LinearLayout>
